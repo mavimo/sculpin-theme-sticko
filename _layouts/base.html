@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ include "head" }}
+  {% include "head" %}
   <body>
     <div id="main-content" role="main" class="pure-g-r">
       <aside id="main-sidebar" class="pure-u-1-2" style="background-image:url({{ sculpin.cover }})">
-        {% include "aside" %}
-        {% include "after_asite" %}
+        {% block aside %}
+        {% endblock %}
+        {% include "after_aside" %}
       </aside>
       <section id="main" class="pure-u-1-2">
-        {% block "content" %}
+        {% block content %}
+        {% endblock %}
         {% include "after_content" %}
       </section>
     </div>
