@@ -5,11 +5,11 @@
 {% endfor %}
 
 {% for script in theme_paths("assets/js/plugins/jquery.fitvids.js") %}
-  <script src="{{ script }}"></script>
+  <script src="{{ site.url }}{{ script }}"></script>
 {% endfor %}
 
 {% for script in theme_paths("assets/js/script.js") %}
-  <script src="{{ script }}"></script>
+  <script src="{{ site.url }}{{ script }}"></script>
 {% endfor %}
 
 <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
