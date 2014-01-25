@@ -13,7 +13,7 @@
     </menu>
   </header>
   <div class="post-content">
-    {{ post.blocks.excerpt }} &hellip;</p>
+    {{ post.blocks.content|raw }} &hellip;</p>
   </div>
   <a href="{{ site.url }}{{ post.url }}" class="button button-default button-keep-reading" title="Read &quot;{{ post.title }}&quot;">Keep reading &rarr;</a>
 </article>
