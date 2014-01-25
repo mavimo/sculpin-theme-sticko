@@ -1,15 +1,41 @@
 <menu class="social-media-share">
-  <a href="#" class="icon-facebook" rel="external" title="My Facebook"></a>
-  <a href="#" class="icon-twitter" rel="external" title="My Twitter"></a>
-  <a href="#" class="icon-googleplus" rel="external" title="My Google+"></a>
-  <a href="#" class="icon-flickr" rel="external" title="My Flickr"></a>
-  <a href="#" class="icon-linkedin" rel="external" title="My LinkedIn"></a>
-  <a href="#" class="icon-pinterest" rel="external" title="My Pinterest"></a>
-  <a href="#" class="icon-vimeo" rel="external" title="My Vimeo"></a>
-  <a href="#" class="icon-github" rel="external" title="My GitHub"></a>
-  <a href="#" class="icon-dribbble" rel="external" title="My Dribbble"></a>
-  <a href="#" class="icon-stumbleupon" rel="external" title="My Stumbleupon"></a>
-  <a href="#" class="icon-lastfm" rel="external" title="My Lastfm"></a>
-  <a href="#" class="icon-rdio" rel="external" title="My Rdio"></a>
-  <a href="#" class="icon-youtube" rel="external" title="My YouTube"></a>
+  {% if site.social.facebook %}
+    <a href="{{ site.social.facebook }}" class="icon-facebook" rel="external" title="My Facebook"></a>
+  {% endif %}
+  {% if site.social.twitter %}
+    <a href="{{ site.social.twitter }}" class="icon-twitter" rel="external" title="My Twitter"></a>
+  {% endif %}
+  {% if site.social.googleplus %}
+    <a href="{{ site.social.googleplus }}" class="icon-googleplus" rel="external" title="My Google+"></a>
+  {% endif %}
+  {% if site.social.flickr %}
+    <a href="{{ site.social.flickr }}" class="icon-flickr" rel="external" title="My Flickr"></a>
+  {% endif %}
+  {% if site.social.linkedin %}
+    <a href="{{ site.social.linkedin }}" class="icon-linkedin" rel="external" title="My LinkedIn"></a>
+  {% endif %}
+  {% if site.social.pinterest %}
+    <a href="{{ site.social.pinterest }}" class="icon-pinterest" rel="external" title="My Pinterest"></a>
+  {% endif %}
+  {% if site.social.vimeo %}
+    <a href="{{ site.social.vimeo }}" class="icon-vimeo" rel="external" title="My Vimeo"></a>
+  {% endif %}
+  {% if site.social.github %}
+    <a href="{{ site.social.github }}" class="icon-github" rel="external" title="My GitHub"></a>
+  {% endif %}
+  {% if site.social.dribbble %}
+    <a href="{{ site.social.dribbble }}" class="icon-dribbble" rel="external" title="My Dribbble"></a>
+  {% endif %}
+  {% if site.social.stumbleupon %}
+    <a href="{{ site.social.stumbleupon }}" class="icon-stumbleupon" rel="external" title="My Stumbleupon"></a>
+  {% endif %}
+  {% if site.social.lastfm %}
+    <a href="{{ site.social.lastfm }}" class="icon-lastfm" rel="external" title="My Lastfm"></a>
+  {% endif %}
+  {% if site.social.rdio %}
+    <a href="{{ site.social.rdio }}" class="icon-rdio" rel="external" title="My Rdio"></a>
+  {% endif %}
+  {% if site.social.youtube %}
+    <a href="{{ site.social.youtube }}" class="icon-youtube" rel="external" title="My YouTube"></a>
+  {% endif %}
 </menu>
