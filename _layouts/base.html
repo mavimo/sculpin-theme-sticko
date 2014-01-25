@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   {{ include "head" }}
-  <body class="{{body_class}}">
-        <div id="main-content" role="main" class="pure-g-r">
-            <aside id="main-sidebar" class="pure-u-1-2" style="background-image:url({{@blog.cover}})">
-                {{> aside}}
-            </aside>
-            <section id="main" class="pure-u-1-2">
-                {{{body}}}
-            </section>
-        </div>
+  <body>
+    <div id="main-content" role="main" class="pure-g-r">
+      <aside id="main-sidebar" class="pure-u-1-2" style="background-image:url({{ sculpin.cover }})">
+        {% include "aside" %}
+        {% include "after_asite" %}
+      </aside>
+      <section id="main" class="pure-u-1-2">
+        {% block "content" %}
+        {% include "after_content" %}
+      </section>
+    </div>
 
-        {{! Ghost outputs important scripts and data with this tag }}
-        {{ghost_foot}}
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="/assets/js/plugins/jquery.fitvids.js"></script>
-        <script src="/assets/js/script.js"></script>
-        {{#if post}}
-        <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
-        {{/if}}
+    {% include "foot" %}
+    {% include "after_footer" %}
   </body>
 </html>
