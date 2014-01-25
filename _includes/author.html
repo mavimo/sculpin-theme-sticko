@@ -1,0 +1,10 @@
+<div class="author">
+  <figure class="author-avatar">
+    <img class="avatar-image" src="{{ site.author.image }}" alt="{{ site.author.name }} Avatar">
+  </figure>
+  <header class="author-name">{{ site.author.name }}</header>
+  <p class="author-bio">{{ site.author.bio }}</p>
+  {% if site.author.location %}
+    <p><small>{{ site.author.location }}</small></p>
+  {% endif %}
+</div>
