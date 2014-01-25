@@ -2,7 +2,7 @@
   <header class="post-header">
     <h1><a href="{{ site.url }}{{ post.url }}" title="Read &quot;{{ post.title }}&quot;">{{ post.title }}</a></h1>
     <menu class="post-meta">
-      <div class="post-meta-data"><i class="icon-datetime"></i> {{ post.date|date('jS') }}</div>
+      <div class="post-meta-data"><i class="icon-datetime"></i> {{ post.date | date('jS') }}</div>
       {% if post.tags %}
         <div class="post-meta-data"> <i class="icon-tags"></i>
         {% for tag in post.tags %}
@@ -13,7 +13,7 @@
     </menu>
   </header>
   <div class="post-content">
-    {{ post.blocks.exceprt }} &hellip;</p>
+    {{ post.blocks.excerpt }} &hellip;</p>
   </div>
   <a href="{{ site.url }}{{ post.url }}" class="button button-default button-keep-reading" title="Read &quot;{{ post.title }}&quot;">Keep reading &rarr;</a>
 </article>
