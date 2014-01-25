@@ -6,7 +6,11 @@
       <aside id="main-sidebar" class="pure-u-1-2" style="background-image:url({{ sculpin.cover }})">
         {% block aside %}
         {% endblock %}
+        {% include "social" %}
         {% include "after_aside" %}
+
+        {% include "foot" %}
+        {% include "after_footer" %}
       </aside>
       <section id="main" class="pure-u-1-2">
         {% block content %}
@@ -14,8 +18,5 @@
         {% include "after_content" %}
       </section>
     </div>
-
-    {% include "foot" %}
-    {% include "after_footer" %}
   </body>
 </html>
