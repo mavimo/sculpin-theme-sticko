@@ -77,10 +77,37 @@ author:
   location: Bergamo, Italy
 ```
 
+### Setup pages
+
+In your source folder create a index.html page with the following content:
+
+```
+---
+layout: default
+title: Home
+generator: pagination
+pagination:
+    max_per_page: 3
+use:
+    - posts
+---
+{% include "blog_index" %}
+```
+
+You can change the pagination number and content type to use.
+
+You can define the menu items creating a subfolder ```_includes``` and add in this folder a file ```nav.html```. In this file add the links you will add in your side bar menu, eg:
+
+```
+<a href="{{ site.url }}/" title="Go to Home">Home</a>
+<a href="{{ site.url }}/about" title="Go to About">About</a>
+<a href="{{ site.url }}/projects">Projects</a>
+<a href="http://agavee.com/">Company</a>
+```
+
 ### Editing CSS/SCSS files.
 
 **Sticko** is developed on top of [Sass](http://sass-lang.com/install) and [Compass](http://compass-style.org/install), which means that you are going to need both running on your own machine; follow both guides to set up the proper environment.
-
 
 ## Get in touch
 
