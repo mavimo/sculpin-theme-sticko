@@ -9,7 +9,10 @@
         {% include "foot" %}
       </aside>
       <section id="main" class="pure-u-1-2">
-        {% block content %}
+        {% block content_wrapper %}
+          {% block content %}
+            {{ page.blocks.content_wrapper | raw }}
+          {% endblock %}
         {% endblock %}
         {% include "after_content" %}
       </section>

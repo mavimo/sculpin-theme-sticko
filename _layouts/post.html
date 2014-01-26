@@ -1,13 +1,13 @@
 {% extends "base" %}
-{% block content %}
+{% block content_wrapper %}
 <article class="post">
   <header class="post-header">
     <h1>{{ page.title }}</h1>
     <menu class="post-meta">
-      <div class="post-meta-data"><i class="icon-datetime"></i> {{ post.date | date('jS') }}</div>
+      <div class="post-meta-data"><i class="icon-datetime"></i> {{ page.date | date('jS') }}</div>
       {% if page.tags %}
         <div class="post-meta-data"> <i class="icon-tags"></i>
-        {% for tag in post.tags %}
+        {% for tag in page.tags %}
           {{ tag }}</a>{% if not loop.last %}, {% endif %}
         {% endfor %}
         </div>
@@ -15,16 +15,15 @@
     </menu>
   </header>
   <div class="post-content">
-    {{ page.content|raw }}
+    {{ page.blocks.content | raw }}
   </div>
 
   <!-- Google+ Comments -->
   <section class="comments">
   <div id="post_{{ id }}_comments"></div>
   <script>(function () {
-    var c = document.getElementById('post_{{id}}_comments'),
-        w = c.offsetWidth;
-    c.innerHTML = '<div class="g-comments" data-href="{{ site.url }}{{ post.url }}" data-width="' + w + '" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>';
+    var c = document.getElementById('post_{{id}}_comments'),w = c.offsetWidth;
+    c.innerHTML = '<div class="g-comments" data-href="{{ site.url }}{{ page.url }}" data-width="' + w + '" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>';
     })();</script>
   </section>
 </article>
