@@ -1,5 +1,9 @@
 # Porting of Sticko theme
 
+![content list](https://raw2.github.com/mavimo/sculpin-theme-sticko/gh-pages/sample/post-list.png)
+![content page](https://raw2.github.com/mavimo/sculpin-theme-sticko/gh-pages/sample/post-content.png)
+![page with menu open](https://raw2.github.com/mavimo/sculpin-theme-sticko/gh-pages/sample/menu.png)
+
 ## About this theme
 
 This is a porting of [sticko](http://sticko.apps.runkite.com/), a clean, modern, **responsive** and **free** theme for the emerging -and absolutely amazing- blogging platform called [Sculpin](http://sculpin.io).
