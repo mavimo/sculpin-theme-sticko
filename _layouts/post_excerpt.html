@@ -9,10 +9,13 @@
     <h1><a href="{{ site.url }}{{ post.url }}" title="Read &quot;{{ post.title }}&quot;">{{ post.title }}</a></h1>
     <menu class="post-meta">
       <div class="post-meta-data"><i class="icon-datetime"></i> {{ post.date | date('jS') }}</div>
-      {% if post.tags %}
+      {% if page.tags or page.categories %}
         <div class="post-meta-data"> <i class="icon-tags"></i>
-        {% for tag in post.tags %}
-          {{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {% for tag in page.tags %}
+          <a href="#">{{ tag }}</a>
+        {% endfor %}
+        {% for tag in page.categories %}
+          <a href="#">{{ tag }}</a>
         {% endfor %}
         </div>
       {% endif %}
