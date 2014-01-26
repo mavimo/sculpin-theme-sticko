@@ -1,0 +1,15 @@
+{% for post in page.pagination.items %}
+  {% include "post_excerpt" %}
+{% endfor %}
+
+{% if page.pagination.previous_page or page.pagination.next_page %}
+  <nav class="pagination" role="pagination">
+    {% if page.pagination.next_page %}
+      <a class="older-posts" href="{{ site.url }}{{ page.pagination.next_page.url }}">Older posts &rarr;</a>
+    {% endif %}
+    <!-- <a href="{{ site.url }}/blog/archives/">Blog Archives</a> -->
+    {% if page.pagination.previous_page %}
+      <a class="newer-posts" href="{{ site.url }}{{ page.pagination.previous_page.url }}">&larr; Newer posts</a>
+    {% endif %}
+  </nav>
+{% endif %}
