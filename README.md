@@ -30,7 +30,7 @@ your `sculpin.json`:
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:mavimo/sculpin-theme-stickio.git"
+            "url": "git@github.com:mavimo/sculpin-theme-sticko.git"
         }
     ],
     "require": {
